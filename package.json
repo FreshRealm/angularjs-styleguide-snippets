@@ -1,7 +1,7 @@
 {
   "name": "angularjs-styleguide-webpack-snippets",
   "main": "./lib/angularjs-styleguide-webpack-snippets",
-  "version": "1.0.0",
+  "version": "0.7.4",
   "description": "A set of AngularJS snippets based on John Papa's style guide that are ready for use in a webpack based development environment.",
   "repository": "https://github.com/freshrealm/angularjs-styleguide-webpack-snippets",
   "license": "MIT",
