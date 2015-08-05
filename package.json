@@ -6,7 +6,7 @@
   "repository": "https://github.com/freshrealm/angularjs-styleguide-webpack-snippets",
   "license": "MIT",
   "engines": {
-    "atom": ">1.00.0"
+    "atom": ">1.0.0"
   },
   "dependencies": {}
 }
