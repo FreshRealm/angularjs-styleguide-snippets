@@ -2,23 +2,20 @@
   'ngController':
     'prefix': 'ngcontroller'
     'body': """
-      (function() {
-          'use strict';
+      var angular = require('angular');
 
-          angular
-              .module('${1:module}')
-              .controller('${2:Controller}', ${2:Controller});
+      angular
+          .module('${1:module}')
+          .controller('${2:Controller}', ${2:Controller});
 
-          ${2:Controller}.$inject = ['${3:dependencies}'];
+      /* @ngInject */
+      function ${2:Controller}(${3:dependencies}) {
+          var vm = this;
 
-          function ${2:Controller}(${3:dependencies}) {
-              var vm = this;
+          activate();
 
-              activate();
+          function activate() {
 
-              function activate() {
-
-              }
           }
-      })();
+      }
     """

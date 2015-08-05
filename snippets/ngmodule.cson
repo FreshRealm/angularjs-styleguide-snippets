@@ -2,12 +2,10 @@
   'ngModule':
     'prefix': 'ngmodule'
     'body': """
-      (function() {
-          'use strict';
+      var angular = require('angular');
 
-          angular
-              .module('${1:module}', [
-                  '${2:dependencies}'
-              ]);
-      })();
+      angular
+          .module('${1:module}', [
+              '${2:dependencies}'
+          ]);
     """

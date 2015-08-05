@@ -2,21 +2,18 @@
   'ngService':
     'prefix': 'ngservice'
     'body': """
-      (function() {
-          'use strict';
+      var angular = require('angular');
 
-          angular
-              .module('${1:module}')
-              .service('${2:Service}', ${2:Service});
+      angular
+          .module('${1:module}')
+          .service('${2:Service}', ${2:Service});
 
-          ${2:Service}.$inject = ['${3:dependencies}'];
+      /* @ngInject */
+      function ${2:Service}(${3:dependencies}) {
+          this.${4:function} = ${4:function};
 
-          function ${2:Service}(${3:dependencies}) {
-              this.${4:function} = ${4:function};
+          function ${4:function}() {
 
-              function ${4:function}() {
-
-              }
           }
-      })();
+      }
     """

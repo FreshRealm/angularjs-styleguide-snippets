@@ -3,7 +3,7 @@
   "main": "./lib/angularjs-styleguide-snippets",
   "version": "0.7.2",
   "description": "A set of AngularJS snippets based on John Papa's style guide.",
-  "repository": "https://github.com/jmiazga/angularjs-styleguide-snippets",
+  "repository": "https://github.com/freshrealm/angularjs-styleguide-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

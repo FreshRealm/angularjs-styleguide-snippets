@@ -2,19 +2,18 @@
   'ngFilter':
     'prefix': 'ngfilter'
     'body': """
-      (function() {
-          'use strict';
+      var angular = require('angular');
 
-          angular
-              .module('${1:module}')
-              .filter('${2:filter}', ${2:filter});
+      angular
+          .module('${1:module}')
+          .filter('${2:filter}', ${2:filter});
 
-          function ${2:filter}() {
-              return ${2:filter}Filter
+      /* @ngInject */
+      function ${2:filter}() {
+          return ${2:filter}Filter
 
-              function ${2:filter}Filter(${3:params}) {
-                  return ${3:params};
-              }
+          function ${2:filter}Filter(${3:params}) {
+              return ${3:params};
           }
-      })();
+      }
     """
