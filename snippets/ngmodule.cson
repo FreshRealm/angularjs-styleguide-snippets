@@ -4,7 +4,7 @@
     'body': """
       var angular = require('angular');
 
-      angular
+      module.exports = angular
           .module('${1:module}', [
               '${2:dependencies}'
           ]);
