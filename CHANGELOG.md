@@ -1,3 +1,7 @@
+## 1.1.0 - New snippets
+Merge in new snippets from ‘jmiazga/master’ and modify them for webpack use.
+* Added ngcomponent
+* Added ngroute and ngstate 
 ## 1.0.1 - Improve module snippet
 * Add module.exports into the module snippet
 ## 1.0.0 - First release of webpack version
