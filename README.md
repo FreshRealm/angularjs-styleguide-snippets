@@ -58,6 +58,30 @@ function ${2:factory}(${3:dependencies}) {
 }
 ```
 
+##### ngcomponent
+```
+var angular = require('angular');
+
+angular
+    .module('${1:module}')
+    .component('${2:component}', ${2:component}());
+
+/* @ngInject */
+function ${2:component}() {
+    var component = {
+        templateUrl: '${3:templateUrl}',
+        controller: ${4:Controller}
+    };
+
+    return component; 
+}
+
+/* @ngInject */
+function ${4:Controller}(${5:dependencies}) {
+
+}
+```
+
 ##### ngdirective
 ```
 var angular = require('angular');
@@ -130,6 +154,56 @@ function ${2:filter}() {
 
     function ${2:filter}Filter(${3:params}) {
         return ${3:params};
+    }
+}
+```
+
+##### ngroute
+```
+var angular = require('angular');
+
+angular
+    .module('${1:module}')
+    .run(appRun);
+
+appRun.$inject = ['routerHelper'];
+/* @ngInject */
+function appRun(routerHelper) {
+    routerHelper.configureStates(getStates());
+}
+
+function getStates() {
+    return [
+        {
+            state: '${2:state}',
+            config: {
+                url: '/',
+                templateUrl: 'app/${2:state}/${2:state}.html',
+                controller: '${2:State}Controller',
+                controllerAs: 'vm',
+                title: '${2:state}',
+                params: {
+                    ${3:param}: ${4:value}
+                }
+            }
+        }
+    ];
+}
+```
+
+##### ngstate
+```
+{
+    state: '${1:state}',
+    config: {
+        url: '/',
+        templateUrl: 'app/${1:state}/${1:state}.html',
+        controller: '${1:State}Controller',
+        controllerAs: 'vm',
+        title: '${1:state}',
+        params: {
+            ${2:param}: ${3:value}
+        }
     }
 }
 ```

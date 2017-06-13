@@ -1,0 +1,24 @@
+'.source.js':
+  'ngComponent':
+    'prefix': 'ngcomponent'
+    'body': """
+      var angular = require('angular');
+      angular
+          .module('${1:module}')
+          .component('${2:component}', ${2:component}());
+
+      /* @ngInject */
+      function ${2:component}() {
+          var component = {
+              templateUrl: '${3:templateUrl}',
+              controller: ${4:Controller}
+          };
+
+          return component; 
+      }
+
+      /* @ngInject */
+      function ${4:Controller}(${5:dependencies}) {
+
+      }
+    """
